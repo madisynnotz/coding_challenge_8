@@ -1,7 +1,7 @@
 // Task 1: Function Declaration
 
 function calculateSalary(baseSalary, bonus, taxRate) {
-    let netSalary = (baseSalary + bonus) - (baseSalary * taxRate);
+    const netSalary = (baseSalary + bonus) - (baseSalary * taxRate);
     return `Net Salary: $${netSalary.toFixed(2)}`;
 }
 
@@ -12,7 +12,7 @@ console.log(calculateSalary(7000, 1000, 0.15)); // Expected output: "Net Salary:
 // Task 2: Function Expression
 
 const calculateDiscount = function(price, discountRate) {
-    let finalPrice = price - (price * discountRate);
+    const  finalPrice = price - (price * discountRate);
     return `Final Price: $${finalPrice.toFixed(2)}`;
 };
 
@@ -56,7 +56,7 @@ console.log(calculateRentalCost(5, "Luxury", false));  // Expected output: "Tota
 // Task 5: Returning Values
 
 function calculateLoanPayment(principal, rate, time) {
-    let totalPayment = principal + (principal * rate * time);
+    const totalPayment = principal + (principal * rate * time);
     return `Total Payment: $${totalPayment.toFixed(2)}`;
 }
 
@@ -68,7 +68,7 @@ console.log(calculateLoanPayment(5000, 0.07, 3));  // Expected output: "Total Pa
 
 let transactions = [200, 1500, 3200, 800, 2500];
 
-const filterLargeTransactions = (transactions, filterFunction) => {
+function filterLargeTransactions = (transactions, filterFunction) => {
     return transactions.filter(filterFunction);
 };
 
@@ -78,7 +78,7 @@ console.log(filterLargeTransactions(transactions, amount => amount > 1000));
 
 // Task 7: Closures
 
-function createCartTracker() {
+function createCartTracker() { // closure function
     let total = 0;
     
     return function(amount) {
